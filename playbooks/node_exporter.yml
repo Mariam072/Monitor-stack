@@ -1,0 +1,27 @@
+---
+- name: Install and Run Node Exporter on nodes
+  hosts: nodes
+  become: true
+  tasks:
+
+    - name: Pull latest Node Exporter image
+      containers.podman.podman_image:
+        name: prom/node-exporter:latest
+        pull: true
+
+    - name: Run Node Exporter container
+      containers.podman.podman_container:
+        name: node-exporter
+        image: prom/node-exporter:latest
+        state: started
+        restart_policy: unless-stopped
+        ports:
+          - "9100:9100"
+
+    - name: Ensure firewall allows Node Exporter port
+      firewalld:
+        port: 9100/tcp
+        permanent: true
+        state: enabled
+        immediate: yes
+

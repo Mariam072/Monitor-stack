@@ -1,0 +1,7 @@
+- name: Install required packages
+  dnf:
+    name:
+      - podman
+      - python3
+    state: present
+

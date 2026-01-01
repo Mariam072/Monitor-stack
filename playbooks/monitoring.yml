@@ -1,0 +1,6 @@
+- name: Setup Monitoring Stack
+  hosts: monitoring
+  become: true
+  roles:
+    - /home/devops/monitoring-project/roles/monitoring
+

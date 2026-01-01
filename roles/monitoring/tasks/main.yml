@@ -1,0 +1,114 @@
+---
+# ---------- Copy Prometheus config ----------
+- name: Copy Prometheus config
+  copy:
+    src: /home/devops/monitoring-project/files/prometheus.yml
+    dest: /etc/prometheus/prometheus.yml
+    owner: devops
+    group: devops
+    mode: '0644'
+
+# ---------- Copy Alertmanager config ----------
+- name: Copy Alertmanager config
+  copy:
+    src: /home/devops/monitoring-project/files/alertmanager.yml
+    dest: /etc/alertmanager/alertmanager.yml
+    owner: devops
+    group: devops
+    mode: '0644'
+
+- name: Copy Node2 alert rules
+  copy:
+    src: /home/devops/monitoring-project/files/node2_alerts.yml
+    dest: /etc/prometheus/node2_alerts.yml
+    owner: devops
+    group: devops
+    mode: '0644'
+
+# ---------- Copy Grafana provisioning ----------
+- name: Copy Grafana dashboards
+  copy:
+    src: /home/devops/monitoring-project/files/grafana_datasource.yml
+    dest: /etc/grafana/provisioning/
+    owner: devops
+    group: devops
+    mode: '0644'
+
+# ---------- Pull Prometheus image ----------
+- name: Pull Prometheus image
+  containers.podman.podman_image:
+    name: docker.io/prom/prometheus:latest
+    pull: yes
+
+# ---------- Run Prometheus container ----------
+- name: Run Prometheus container
+  containers.podman.podman_container:
+    name: prometheus
+    image: docker.io/prom/prometheus:latest
+    state: started
+    recreate: true
+    restart_policy: always
+    ports:
+      - "9090:9090"
+    volumes:
+      - /etc/prometheus:/etc/prometheus:Z
+
+# ---------- Pull Alertmanager image ----------
+- name: Pull Alertmanager image
+  containers.podman.podman_image:
+    name: docker.io/prom/alertmanager:latest
+    pull: yes
+
+# ---------- Run Alertmanager container ----------
+- name: Run Alertmanager container
+  containers.podman.podman_container:
+    name: alertmanager
+    image: docker.io/prom/alertmanager:latest
+    state: started
+    recreate: true
+    restart_policy: always
+    ports:
+      - "9093:9093"
+    volumes:
+      - /etc/alertmanager:/etc/alertmanager:Z
+
+# ---------- Pull Grafana image ----------
+- name: Pull Grafana image
+  containers.podman.podman_image:
+    name: docker.io/grafana/grafana:latest
+    pull: yes
+
+# ---------- Run Grafana container ----------
+- name: Copy Grafana provisioning
+  copy:
+    src: /home/devops/monitoring-project/grafana/provisioning/
+    dest: /etc/grafana/provisioning/
+    owner: devops
+    group: devops
+    mode: '0755'
+
+- name: Pull Grafana image
+  containers.podman.podman_image:
+    name: docker.io/grafana/grafana:latest
+    pull: yes
+
+- name: Run Grafana container
+  containers.podman.podman_container:
+    name: grafana
+    image: docker.io/grafana/grafana:latest
+    state: started
+    recreate: true
+    restart_policy: unless-stopped
+    ports:
+      - "3000:3000"
+    volumes:
+      - /etc/grafana/provisioning:/etc/grafana/provisioning:Z
+# ---------- Debug: Show running containers ----------
+- name: List running Podman containers
+  command: podman ps --filter name=prometheus --filter name=alertmanager --filter name=grafana
+  register: podman_ps
+
+- name: Debug - Show running containers
+  debug:
+    var: podman_ps.stdout_lines
+

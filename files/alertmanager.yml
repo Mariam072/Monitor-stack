@@ -1,0 +1,16 @@
+global:
+  resolve_timeout: 5m
+
+route:
+  receiver: 'email-alerts'
+
+receivers:
+  - name: 'email-alerts'
+    email_configs:
+      - to: 'mariamhassanmohamed616@gmail.com'
+        from: 'mariamhassanmohamed616@gmail.com'
+        smarthost: 'smtp.gmail.com:587'
+        auth_username: 'mariamhassanmohamed616@gmail.com'
+        auth_identity: 'mariamhassanmohamed616@gmail.com'
+        auth_password: 'fxelwybsjjkkqcow'
+

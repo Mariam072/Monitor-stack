@@ -1,0 +1,2 @@
+2025-12-31T14:37:46.597378+00:00 CRITICAL 'ansible_navigator.actions.run_1905._handle_message' Unhandled message from runner queue, discarded: {'event': 'verbose', 'uuid': '9d67a711-df5b-47a1-bed3-3ae3d6f3b5d0', 'counter': 1, 'stdout': '\x1b[0;31mERROR! the playbook: playbooks/node_exporter.yml could not be found\x1b[0m', 'start_line': 0, 'end_line': 1, 'runner_ident': '64ba352c-5792-4364-83bc-52af09f072ac', 'created': '2025-12-31T14:37:46.596881+00:00'}
+2025-12-31T14:38:27.424135+00:00 WARNING 'ansible_navigator.run' Dirty exit, killing the pid

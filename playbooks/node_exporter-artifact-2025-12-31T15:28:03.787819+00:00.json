@@ -1,0 +1,1995 @@
+{
+    "plays": [
+        {
+            "__play_name": "Install and Run Node Exporter on nodes",
+            "name": "Install and Run Node Exporter on nodes",
+            "pattern": "nodes",
+            "play": "Install and Run Node Exporter on nodes",
+            "play_pattern": "nodes",
+            "play_uuid": "261a397b-a0d8-4e24-cf2f-000000000003",
+            "playbook": "/root/monitoring-project/playbooks/node_exporter.yml",
+            "playbook_uuid": "2196d250-ea64-4419-9653-730453ab880c",
+            "tasks": [
+                {
+                    "__changed": false,
+                    "__duration": "12s",
+                    "__host": "node1",
+                    "__number": 0,
+                    "__result": "Ok",
+                    "__task": "Gathering Facts",
+                    "__task_action": "gather_facts",
+                    "duration": 12.319354,
+                    "end": "2025-12-31T15:27:47.163310+00:00",
+                    "event_loop": null,
+                    "host": "node1",
+                    "play": "Install and Run Node Exporter on nodes",
+                    "play_pattern": "nodes",
+                    "play_uuid": "261a397b-a0d8-4e24-cf2f-000000000003",
+                    "playbook": "/root/monitoring-project/playbooks/node_exporter.yml",
+                    "playbook_uuid": "2196d250-ea64-4419-9653-730453ab880c",
+                    "remote_addr": "node1",
+                    "res": {
+                        "_ansible_no_log": null,
+                        "_ansible_verbose_override": true,
+                        "ansible_facts": {
+                            "ansible_all_ipv4_addresses": [
+                                "192.168.111.136"
+                            ],
+                            "ansible_all_ipv6_addresses": [
+                                "fe80::20c:29ff:fe76:6295"
+                            ],
+                            "ansible_apparmor": {
+                                "status": "disabled"
+                            },
+                            "ansible_architecture": "x86_64",
+                            "ansible_bios_date": "06/04/2024",
+                            "ansible_bios_vendor": "VMware, Inc.",
+                            "ansible_bios_version": "VMW201.00V.24006586.B64.2406042154",
+                            "ansible_board_asset_tag": "NA",
+                            "ansible_board_name": "440BX Desktop Reference Platform",
+                            "ansible_board_serial": "None",
+                            "ansible_board_vendor": "Intel Corporation",
+                            "ansible_board_version": "None",
+                            "ansible_chassis_asset_tag": "No Asset Tag",
+                            "ansible_chassis_serial": "None",
+                            "ansible_chassis_vendor": "No Enclosure",
+                            "ansible_chassis_version": "N/A",
+                            "ansible_cmdline": {
+                                "BOOT_IMAGE": "(hd0,gpt2)/vmlinuz-5.14.0-570.12.1.el9_6.x86_64",
+                                "crashkernel": "1G-4G:192M,4G-64G:256M,64G-:512M",
+                                "quiet": true,
+                                "rd.lvm.lv": "rhel/usr",
+                                "resume": "/dev/mapper/rhel-swap",
+                                "rhgb": true,
+                                "ro": true,
+                                "root": "/dev/mapper/rhel-root"
+                            },
+                            "ansible_date_time": {
+                                "date": "2025-12-31",
+                                "day": "31",
+                                "epoch": "1767194866",
+                                "epoch_int": "1767194866",
+                                "hour": "17",
+                                "iso8601": "2025-12-31T15:27:46Z",
+                                "iso8601_basic": "20251231T172746980228",
+                                "iso8601_basic_short": "20251231T172746",
+                                "iso8601_micro": "2025-12-31T15:27:46.980228Z",
+                                "minute": "27",
+                                "month": "12",
+                                "second": "46",
+                                "time": "17:27:46",
+                                "tz": "EET",
+                                "tz_dst": "EEST",
+                                "tz_offset": "+0200",
+                                "weekday": "Wednesday",
+                                "weekday_number": "3",
+                                "weeknumber": "52",
+                                "year": "2025"
+                            },
+                            "ansible_default_ipv4": {
+                                "address": "192.168.111.136",
+                                "alias": "ens160",
+                                "broadcast": "192.168.111.255",
+                                "gateway": "192.168.111.2",
+                                "interface": "ens160",
+                                "macaddress": "00:0c:29:76:62:95",
+                                "mtu": 1500,
+                                "netmask": "255.255.255.0",
+                                "network": "192.168.111.0",
+                                "prefix": "24",
+                                "type": "ether"
+                            },
+                            "ansible_default_ipv6": {},
+                            "ansible_device_links": {
+                                "ids": {
+                                    "dm-0": [
+                                        "dm-name-rhel-root",
+                                        "dm-uuid-LVM-w2yx3ZpKCWfApofWBu4d1T7GSXORiil2baU2VdRLW0KJs9zM5fqo5gDNILEe7xmi"
+                                    ],
+                                    "dm-1": [
+                                        "dm-name-rhel-swap",
+                                        "dm-uuid-LVM-w2yx3ZpKCWfApofWBu4d1T7GSXORiil2isIMs0tRrP28rqGswfjUya2GbPUlzO1x"
+                                    ],
+                                    "dm-2": [
+                                        "dm-name-rhel-usr",
+                                        "dm-uuid-LVM-w2yx3ZpKCWfApofWBu4d1T7GSXORiil2eYLX7J7RFw1hrDFq3bIapk5563eOuCEj"
+                                    ],
+                                    "dm-3": [
+                                        "dm-name-rhel-tmp",
+                                        "dm-uuid-LVM-w2yx3ZpKCWfApofWBu4d1T7GSXORiil22ubEqRzDB9dzzj8Tb8k8HBEc8fqkVAyf"
+                                    ],
+                                    "dm-4": [
+                                        "dm-name-rhel-opt",
+                                        "dm-uuid-LVM-w2yx3ZpKCWfApofWBu4d1T7GSXORiil2PYrprR07rOqu1HlmD8WzaOYTVDrfRWL7"
+                                    ],
+                                    "dm-5": [
+                                        "dm-name-rhel-home",
+                                        "dm-uuid-LVM-w2yx3ZpKCWfApofWBu4d1T7GSXORiil213h7l0kycFfycZfnlfE1ADDLcy5bt21g"
+                                    ],
+                                    "dm-6": [
+                                        "dm-name-rhel-var",
+                                        "dm-uuid-LVM-w2yx3ZpKCWfApofWBu4d1T7GSXORiil2rVdXXcwJOn37aUOlTgQsXWKoIErKyZqM"
+                                    ],
+                                    "nvme0n1": [
+                                        "nvme-VMware_Virtual_NVMe_Disk_VMware_NVME_0000",
+                                        "nvme-VMware_Virtual_NVMe_Disk_VMware_NVME_0000_1",
+                                        "nvme-eui.2e00b17ba5fa902c000c2961466e08ae"
+                                    ],
+                                    "nvme0n1p1": [
+                                        "nvme-VMware_Virtual_NVMe_Disk_VMware_NVME_0000-part1",
+                                        "nvme-VMware_Virtual_NVMe_Disk_VMware_NVME_0000_1-part1",
+                                        "nvme-eui.2e00b17ba5fa902c000c2961466e08ae-part1"
+                                    ],
+                                    "nvme0n1p2": [
+                                        "nvme-VMware_Virtual_NVMe_Disk_VMware_NVME_0000-part2",
+                                        "nvme-VMware_Virtual_NVMe_Disk_VMware_NVME_0000_1-part2",
+                                        "nvme-eui.2e00b17ba5fa902c000c2961466e08ae-part2"
+                                    ],
+                                    "nvme0n1p3": [
+                                        "lvm-pv-uuid-mq4kyZ-KIhQ-0V2x-Scwq-B9g6-SBri-TEfqbm",
+                                        "nvme-VMware_Virtual_NVMe_Disk_VMware_NVME_0000-part3",
+                                        "nvme-VMware_Virtual_NVMe_Disk_VMware_NVME_0000_1-part3",
+                                        "nvme-eui.2e00b17ba5fa902c000c2961466e08ae-part3"
+                                    ],
+                                    "sr0": [
+                                        "ata-VMware_Virtual_SATA_CDRW_Drive_01000000000000000001"
+                                    ]
+                                },
+                                "labels": {
+                                    "sr0": [
+                                        "RHEL-9-6-0-BaseOS-x86_64"
+                                    ]
+                                },
+                                "masters": {
+                                    "nvme0n1p3": [
+                                        "dm-0",
+                                        "dm-1",
+                                        "dm-2",
+                                        "dm-3",
+                                        "dm-4",
+                                        "dm-5",
+                                        "dm-6"
+                                    ]
+                                },
+                                "uuids": {
+                                    "dm-0": [
+                                        "6addf5e3-70b9-46b8-938f-4b7c50f50f27"
+                                    ],
+                                    "dm-1": [
+                                        "35803f2e-c0c2-4cc6-8048-77f9020a730b"
+                                    ],
+                                    "dm-2": [
+                                        "a9e75875-2bf8-40d6-911d-e7fda3e06c4d"
+                                    ],
+                                    "dm-3": [
+                                        "b745dfef-9ecf-495c-a4e8-aa936a575a6d"
+                                    ],
+                                    "dm-4": [
+                                        "aec73735-fb7e-4356-8207-50395d64e1b2"
+                                    ],
+                                    "dm-5": [
+                                        "d28b4a6d-5fc8-4e8f-8893-0c150660497e"
+                                    ],
+                                    "dm-6": [
+                                        "8d05db58-c210-49a1-b50a-6ba938717259"
+                                    ],
+                                    "nvme0n1p1": [
+                                        "ACFC-EDFF"
+                                    ],
+                                    "nvme0n1p2": [
+                                        "0bd65017-01ff-4ad1-b0e4-4e917be625fb"
+                                    ],
+                                    "sr0": [
+                                        "2025-04-08-23-13-43-00"
+                                    ]
+                                }
+                            },
+                            "ansible_devices": {
+                                "dm-0": {
+                                    "holders": [],
+                                    "host": "",
+                                    "links": {
+                                        "ids": [
+                                            "dm-name-rhel-root",
+                                            "dm-uuid-LVM-w2yx3ZpKCWfApofWBu4d1T7GSXORiil2baU2VdRLW0KJs9zM5fqo5gDNILEe7xmi"
+                                        ],
+                                        "labels": [],
+                                        "masters": [],
+                                        "uuids": [
+                                            "6addf5e3-70b9-46b8-938f-4b7c50f50f27"
+                                        ]
+                                    },
+                                    "model": null,
+                                    "partitions": {},
+                                    "removable": "0",
+                                    "rotational": "0",
+                                    "sas_address": null,
+                                    "sas_device_handle": null,
+                                    "scheduler_mode": "",
+                                    "sectors": "20971520",
+                                    "sectorsize": "512",
+                                    "size": "10.00 GB",
+                                    "support_discard": "512",
+                                    "vendor": null,
+                                    "virtual": 1
+                                },
+                                "dm-1": {
+                                    "holders": [],
+                                    "host": "",
+                                    "links": {
+                                        "ids": [
+                                            "dm-name-rhel-swap",
+                                            "dm-uuid-LVM-w2yx3ZpKCWfApofWBu4d1T7GSXORiil2isIMs0tRrP28rqGswfjUya2GbPUlzO1x"
+                                        ],
+                                        "labels": [],
+                                        "masters": [],
+                                        "uuids": [
+                                            "35803f2e-c0c2-4cc6-8048-77f9020a730b"
+                                        ]
+                                    },
+                                    "model": null,
+                                    "partitions": {},
+                                    "removable": "0",
+                                    "rotational": "0",
+                                    "sas_address": null,
+                                    "sas_device_handle": null,
+                                    "scheduler_mode": "",
+                                    "sectors": "8388608",
+                                    "sectorsize": "512",
+                                    "size": "4.00 GB",
+                                    "support_discard": "512",
+                                    "vendor": null,
+                                    "virtual": 1
+                                },
+                                "dm-2": {
+                                    "holders": [],
+                                    "host": "",
+                                    "links": {
+                                        "ids": [
+                                            "dm-name-rhel-usr",
+                                            "dm-uuid-LVM-w2yx3ZpKCWfApofWBu4d1T7GSXORiil2eYLX7J7RFw1hrDFq3bIapk5563eOuCEj"
+                                        ],
+                                        "labels": [],
+                                        "masters": [],
+                                        "uuids": [
+                                            "a9e75875-2bf8-40d6-911d-e7fda3e06c4d"
+                                        ]
+                                    },
+                                    "model": null,
+                                    "partitions": {},
+                                    "removable": "0",
+                                    "rotational": "0",
+                                    "sas_address": null,
+                                    "sas_device_handle": null,
+                                    "scheduler_mode": "",
+                                    "sectors": "10485760",
+                                    "sectorsize": "512",
+                                    "size": "5.00 GB",
+                                    "support_discard": "512",
+                                    "vendor": null,
+                                    "virtual": 1
+                                },
+                                "dm-3": {
+                                    "holders": [],
+                                    "host": "",
+                                    "links": {
+                                        "ids": [
+                                            "dm-name-rhel-tmp",
+                                            "dm-uuid-LVM-w2yx3ZpKCWfApofWBu4d1T7GSXORiil22ubEqRzDB9dzzj8Tb8k8HBEc8fqkVAyf"
+                                        ],
+                                        "labels": [],
+                                        "masters": [],
+                                        "uuids": [
+                                            "b745dfef-9ecf-495c-a4e8-aa936a575a6d"
+                                        ]
+                                    },
+                                    "model": null,
+                                    "partitions": {},
+                                    "removable": "0",
+                                    "rotational": "0",
+                                    "sas_address": null,
+                                    "sas_device_handle": null,
+                                    "scheduler_mode": "",
+                                    "sectors": "4194304",
+                                    "sectorsize": "512",
+                                    "size": "2.00 GB",
+                                    "support_discard": "512",
+                                    "vendor": null,
+                                    "virtual": 1
+                                },
+                                "dm-4": {
+                                    "holders": [],
+                                    "host": "",
+                                    "links": {
+                                        "ids": [
+                                            "dm-name-rhel-opt",
+                                            "dm-uuid-LVM-w2yx3ZpKCWfApofWBu4d1T7GSXORiil2PYrprR07rOqu1HlmD8WzaOYTVDrfRWL7"
+                                        ],
+                                        "labels": [],
+                                        "masters": [],
+                                        "uuids": [
+                                            "aec73735-fb7e-4356-8207-50395d64e1b2"
+                                        ]
+                                    },
+                                    "model": null,
+                                    "partitions": {},
+                                    "removable": "0",
+                                    "rotational": "0",
+                                    "sas_address": null,
+                                    "sas_device_handle": null,
+                                    "scheduler_mode": "",
+                                    "sectors": "10485760",
+                                    "sectorsize": "512",
+                                    "size": "5.00 GB",
+                                    "support_discard": "512",
+                                    "vendor": null,
+                                    "virtual": 1
+                                },
+                                "dm-5": {
+                                    "holders": [],
+                                    "host": "",
+                                    "links": {
+                                        "ids": [
+                                            "dm-name-rhel-home",
+                                            "dm-uuid-LVM-w2yx3ZpKCWfApofWBu4d1T7GSXORiil213h7l0kycFfycZfnlfE1ADDLcy5bt21g"
+                                        ],
+                                        "labels": [],
+                                        "masters": [],
+                                        "uuids": [
+                                            "d28b4a6d-5fc8-4e8f-8893-0c150660497e"
+                                        ]
+                                    },
+                                    "model": null,
+                                    "partitions": {},
+                                    "removable": "0",
+                                    "rotational": "0",
+                                    "sas_address": null,
+                                    "sas_device_handle": null,
+                                    "scheduler_mode": "",
+                                    "sectors": "20971520",
+                                    "sectorsize": "512",
+                                    "size": "10.00 GB",
+                                    "support_discard": "512",
+                                    "vendor": null,
+                                    "virtual": 1
+                                },
+                                "dm-6": {
+                                    "holders": [],
+                                    "host": "",
+                                    "links": {
+                                        "ids": [
+                                            "dm-name-rhel-var",
+                                            "dm-uuid-LVM-w2yx3ZpKCWfApofWBu4d1T7GSXORiil2rVdXXcwJOn37aUOlTgQsXWKoIErKyZqM"
+                                        ],
+                                        "labels": [],
+                                        "masters": [],
+                                        "uuids": [
+                                            "8d05db58-c210-49a1-b50a-6ba938717259"
+                                        ]
+                                    },
+                                    "model": null,
+                                    "partitions": {},
+                                    "removable": "0",
+                                    "rotational": "0",
+                                    "sas_address": null,
+                                    "sas_device_handle": null,
+                                    "scheduler_mode": "",
+                                    "sectors": "41943040",
+                                    "sectorsize": "512",
+                                    "size": "20.00 GB",
+                                    "support_discard": "512",
+                                    "vendor": null,
+                                    "virtual": 1
+                                },
+                                "nvme0n1": {
+                                    "holders": [],
+                                    "host": "Non-Volatile memory controller: VMware NVMe SSD Controller",
+                                    "links": {
+                                        "ids": [
+                                            "nvme-VMware_Virtual_NVMe_Disk_VMware_NVME_0000",
+                                            "nvme-VMware_Virtual_NVMe_Disk_VMware_NVME_0000_1",
+                                            "nvme-eui.2e00b17ba5fa902c000c2961466e08ae"
+                                        ],
+                                        "labels": [],
+                                        "masters": [],
+                                        "uuids": []
+                                    },
+                                    "model": "VMware Virtual NVMe Disk",
+                                    "partitions": {
+                                        "nvme0n1p1": {
+                                            "holders": [],
+                                            "links": {
+                                                "ids": [
+                                                    "nvme-VMware_Virtual_NVMe_Disk_VMware_NVME_0000-part1",
+                                                    "nvme-VMware_Virtual_NVMe_Disk_VMware_NVME_0000_1-part1",
+                                                    "nvme-eui.2e00b17ba5fa902c000c2961466e08ae-part1"
+                                                ],
+                                                "labels": [],
+                                                "masters": [],
+                                                "uuids": [
+                                                    "ACFC-EDFF"
+                                                ]
+                                            },
+                                            "sectors": "1048576",
+                                            "sectorsize": 512,
+                                            "size": "512.00 MB",
+                                            "start": "2048",
+                                            "uuid": "ACFC-EDFF"
+                                        },
+                                        "nvme0n1p2": {
+                                            "holders": [],
+                                            "links": {
+                                                "ids": [
+                                                    "nvme-VMware_Virtual_NVMe_Disk_VMware_NVME_0000-part2",
+                                                    "nvme-VMware_Virtual_NVMe_Disk_VMware_NVME_0000_1-part2",
+                                                    "nvme-eui.2e00b17ba5fa902c000c2961466e08ae-part2"
+                                                ],
+                                                "labels": [],
+                                                "masters": [],
+                                                "uuids": [
+                                                    "0bd65017-01ff-4ad1-b0e4-4e917be625fb"
+                                                ]
+                                            },
+                                            "sectors": "1048576",
+                                            "sectorsize": 512,
+                                            "size": "512.00 MB",
+                                            "start": "1050624",
+                                            "uuid": "0bd65017-01ff-4ad1-b0e4-4e917be625fb"
+                                        },
+                                        "nvme0n1p3": {
+                                            "holders": [
+                                                "rhel-swap",
+                                                "rhel-var",
+                                                "rhel-opt",
+                                                "rhel-usr",
+                                                "rhel-root",
+                                                "rhel-home",
+                                                "rhel-tmp"
+                                            ],
+                                            "links": {
+                                                "ids": [
+                                                    "lvm-pv-uuid-mq4kyZ-KIhQ-0V2x-Scwq-B9g6-SBri-TEfqbm",
+                                                    "nvme-VMware_Virtual_NVMe_Disk_VMware_NVME_0000-part3",
+                                                    "nvme-VMware_Virtual_NVMe_Disk_VMware_NVME_0000_1-part3",
+                                                    "nvme-eui.2e00b17ba5fa902c000c2961466e08ae-part3"
+                                                ],
+                                                "labels": [],
+                                                "masters": [
+                                                    "dm-0",
+                                                    "dm-1",
+                                                    "dm-2",
+                                                    "dm-3",
+                                                    "dm-4",
+                                                    "dm-5",
+                                                    "dm-6"
+                                                ],
+                                                "uuids": []
+                                            },
+                                            "sectors": "207613952",
+                                            "sectorsize": 512,
+                                            "size": "99.00 GB",
+                                            "start": "2099200",
+                                            "uuid": null
+                                        }
+                                    },
+                                    "removable": "0",
+                                    "rotational": "0",
+                                    "sas_address": null,
+                                    "sas_device_handle": null,
+                                    "scheduler_mode": "none",
+                                    "sectors": "209715200",
+                                    "sectorsize": "512",
+                                    "serial": "VMware",
+                                    "size": "100.00 GB",
+                                    "support_discard": "512",
+                                    "vendor": null,
+                                    "virtual": 1
+                                },
+                                "sr0": {
+                                    "holders": [],
+                                    "host": "SATA controller: VMware SATA AHCI controller",
+                                    "links": {
+                                        "ids": [
+                                            "ata-VMware_Virtual_SATA_CDRW_Drive_01000000000000000001"
+                                        ],
+                                        "labels": [
+                                            "RHEL-9-6-0-BaseOS-x86_64"
+                                        ],
+                                        "masters": [],
+                                        "uuids": [
+                                            "2025-04-08-23-13-43-00"
+                                        ]
+                                    },
+                                    "model": "VMware SATA CD01",
+                                    "partitions": {},
+                                    "removable": "1",
+                                    "rotational": "0",
+                                    "sas_address": null,
+                                    "sas_device_handle": null,
+                                    "scheduler_mode": "mq-deadline",
+                                    "sectors": "24925056",
+                                    "sectorsize": "2048",
+                                    "size": "11.89 GB",
+                                    "support_discard": "2048",
+                                    "vendor": "NECVMWar",
+                                    "virtual": 1
+                                }
+                            },
+                            "ansible_distribution": "RedHat",
+                            "ansible_distribution_file_parsed": true,
+                            "ansible_distribution_file_path": "/etc/redhat-release",
+                            "ansible_distribution_file_search_string": "Red Hat",
+                            "ansible_distribution_file_variety": "RedHat",
+                            "ansible_distribution_major_version": "9",
+                            "ansible_distribution_release": "Plow",
+                            "ansible_distribution_version": "9.6",
+                            "ansible_dns": {
+                                "nameservers": [
+                                    "192.168.111.2"
+                                ],
+                                "search": [
+                                    "localdomain",
+                                    "example.com"
+                                ]
+                            },
+                            "ansible_domain": "example.com",
+                            "ansible_effective_group_id": 0,
+                            "ansible_effective_user_id": 0,
+                            "ansible_ens160": {
+                                "active": true,
+                                "device": "ens160",
+                                "features": {
+                                    "esp_hw_offload": "off [fixed]",
+                                    "esp_tx_csum_hw_offload": "off [fixed]",
+                                    "generic_receive_offload": "on",
+                                    "generic_segmentation_offload": "on",
+                                    "highdma": "on",
+                                    "hsr_dup_offload": "off [fixed]",
+                                    "hsr_fwd_offload": "off [fixed]",
+                                    "hsr_tag_ins_offload": "off [fixed]",
+                                    "hsr_tag_rm_offload": "off [fixed]",
+                                    "hw_tc_offload": "off [fixed]",
+                                    "l2_fwd_offload": "off [fixed]",
+                                    "large_receive_offload": "off",
+                                    "loopback": "off [fixed]",
+                                    "macsec_hw_offload": "off [fixed]",
+                                    "ntuple_filters": "off [fixed]",
+                                    "receive_hashing": "on",
+                                    "rx_all": "off [fixed]",
+                                    "rx_checksumming": "on",
+                                    "rx_fcs": "off [fixed]",
+                                    "rx_gro_hw": "off [fixed]",
+                                    "rx_gro_list": "off",
+                                    "rx_udp_gro_forwarding": "off",
+                                    "rx_udp_tunnel_port_offload": "off [fixed]",
+                                    "rx_vlan_filter": "on [fixed]",
+                                    "rx_vlan_offload": "on",
+                                    "rx_vlan_stag_filter": "off [fixed]",
+                                    "rx_vlan_stag_hw_parse": "off [fixed]",
+                                    "scatter_gather": "on",
+                                    "tcp_segmentation_offload": "on",
+                                    "tls_hw_record": "off [fixed]",
+                                    "tls_hw_rx_offload": "off [fixed]",
+                                    "tls_hw_tx_offload": "off [fixed]",
+                                    "tx_checksum_fcoe_crc": "off [fixed]",
+                                    "tx_checksum_ip_generic": "on",
+                                    "tx_checksum_ipv4": "off [fixed]",
+                                    "tx_checksum_ipv6": "off [fixed]",
+                                    "tx_checksum_sctp": "off [fixed]",
+                                    "tx_checksumming": "on",
+                                    "tx_esp_segmentation": "off [fixed]",
+                                    "tx_fcoe_segmentation": "off [fixed]",
+                                    "tx_gre_csum_segmentation": "off [fixed]",
+                                    "tx_gre_segmentation": "off [fixed]",
+                                    "tx_gso_list": "off [fixed]",
+                                    "tx_gso_partial": "off [fixed]",
+                                    "tx_gso_robust": "off [fixed]",
+                                    "tx_ipxip4_segmentation": "off [fixed]",
+                                    "tx_ipxip6_segmentation": "off [fixed]",
+                                    "tx_nocache_copy": "off",
+                                    "tx_scatter_gather": "on",
+                                    "tx_scatter_gather_fraglist": "off [fixed]",
+                                    "tx_sctp_segmentation": "off [fixed]",
+                                    "tx_tcp6_segmentation": "on",
+                                    "tx_tcp_ecn_segmentation": "off [fixed]",
+                                    "tx_tcp_mangleid_segmentation": "off",
+                                    "tx_tcp_segmentation": "on",
+                                    "tx_tunnel_remcsum_segmentation": "off [fixed]",
+                                    "tx_udp_segmentation": "off [fixed]",
+                                    "tx_udp_tnl_csum_segmentation": "off [fixed]",
+                                    "tx_udp_tnl_segmentation": "off [fixed]",
+                                    "tx_vlan_offload": "on",
+                                    "tx_vlan_stag_hw_insert": "off [fixed]",
+                                    "vlan_challenged": "off [fixed]"
+                                },
+                                "hw_timestamp_filters": [],
+                                "ipv4": {
+                                    "address": "192.168.111.136",
+                                    "broadcast": "192.168.111.255",
+                                    "netmask": "255.255.255.0",
+                                    "network": "192.168.111.0",
+                                    "prefix": "24"
+                                },
+                                "ipv6": [
+                                    {
+                                        "address": "fe80::20c:29ff:fe76:6295",
+                                        "prefix": "64",
+                                        "scope": "link"
+                                    }
+                                ],
+                                "macaddress": "00:0c:29:76:62:95",
+                                "module": "vmxnet3",
+                                "mtu": 1500,
+                                "pciid": "0000:03:00.0",
+                                "promisc": false,
+                                "speed": 10000,
+                                "timestamping": [],
+                                "type": "ether"
+                            },
+                            "ansible_fibre_channel_wwn": [],
+                            "ansible_fips": false,
+                            "ansible_form_factor": "Other",
+                            "ansible_fqdn": "serverb.example.com",
+                            "ansible_hostname": "serverb",
+                            "ansible_hostnqn": "nqn.2014-08.org.nvmexpress:uuid:b9904d56-c4ec-741c-9cee-40b1933f1d89",
+                            "ansible_interfaces": [
+                                "lo",
+                                "ens160"
+                            ],
+                            "ansible_is_chroot": false,
+                            "ansible_iscsi_iqn": "",
+                            "ansible_kernel": "5.14.0-570.12.1.el9_6.x86_64",
+                            "ansible_kernel_version": "#1 SMP PREEMPT_DYNAMIC Fri Apr 4 10:41:31 EDT 2025",
+                            "ansible_lo": {
+                                "active": true,
+                                "device": "lo",
+                                "features": {
+                                    "esp_hw_offload": "off [fixed]",
+                                    "esp_tx_csum_hw_offload": "off [fixed]",
+                                    "generic_receive_offload": "on",
+                                    "generic_segmentation_offload": "on",
+                                    "highdma": "on [fixed]",
+                                    "hsr_dup_offload": "off [fixed]",
+                                    "hsr_fwd_offload": "off [fixed]",
+                                    "hsr_tag_ins_offload": "off [fixed]",
+                                    "hsr_tag_rm_offload": "off [fixed]",
+                                    "hw_tc_offload": "off [fixed]",
+                                    "l2_fwd_offload": "off [fixed]",
+                                    "large_receive_offload": "off [fixed]",
+                                    "loopback": "on [fixed]",
+                                    "macsec_hw_offload": "off [fixed]",
+                                    "ntuple_filters": "off [fixed]",
+                                    "receive_hashing": "off [fixed]",
+                                    "rx_all": "off [fixed]",
+                                    "rx_checksumming": "on [fixed]",
+                                    "rx_fcs": "off [fixed]",
+                                    "rx_gro_hw": "off [fixed]",
+                                    "rx_gro_list": "off",
+                                    "rx_udp_gro_forwarding": "off",
+                                    "rx_udp_tunnel_port_offload": "off [fixed]",
+                                    "rx_vlan_filter": "off [fixed]",
+                                    "rx_vlan_offload": "off [fixed]",
+                                    "rx_vlan_stag_filter": "off [fixed]",
+                                    "rx_vlan_stag_hw_parse": "off [fixed]",
+                                    "scatter_gather": "on",
+                                    "tcp_segmentation_offload": "on",
+                                    "tls_hw_record": "off [fixed]",
+                                    "tls_hw_rx_offload": "off [fixed]",
+                                    "tls_hw_tx_offload": "off [fixed]",
+                                    "tx_checksum_fcoe_crc": "off [fixed]",
+                                    "tx_checksum_ip_generic": "on [fixed]",
+                                    "tx_checksum_ipv4": "off [fixed]",
+                                    "tx_checksum_ipv6": "off [fixed]",
+                                    "tx_checksum_sctp": "on [fixed]",
+                                    "tx_checksumming": "on",
+                                    "tx_esp_segmentation": "off [fixed]",
+                                    "tx_fcoe_segmentation": "off [fixed]",
+                                    "tx_gre_csum_segmentation": "off [fixed]",
+                                    "tx_gre_segmentation": "off [fixed]",
+                                    "tx_gso_list": "on",
+                                    "tx_gso_partial": "off [fixed]",
+                                    "tx_gso_robust": "off [fixed]",
+                                    "tx_ipxip4_segmentation": "off [fixed]",
+                                    "tx_ipxip6_segmentation": "off [fixed]",
+                                    "tx_nocache_copy": "off [fixed]",
+                                    "tx_scatter_gather": "on [fixed]",
+                                    "tx_scatter_gather_fraglist": "on [fixed]",
+                                    "tx_sctp_segmentation": "on",
+                                    "tx_tcp6_segmentation": "on",
+                                    "tx_tcp_ecn_segmentation": "on",
+                                    "tx_tcp_mangleid_segmentation": "on",
+                                    "tx_tcp_segmentation": "on",
+                                    "tx_tunnel_remcsum_segmentation": "off [fixed]",
+                                    "tx_udp_segmentation": "on",
+                                    "tx_udp_tnl_csum_segmentation": "off [fixed]",
+                                    "tx_udp_tnl_segmentation": "off [fixed]",
+                                    "tx_vlan_offload": "off [fixed]",
+                                    "tx_vlan_stag_hw_insert": "off [fixed]",
+                                    "vlan_challenged": "on [fixed]"
+                                },
+                                "hw_timestamp_filters": [],
+                                "ipv4": {
+                                    "address": "127.0.0.1",
+                                    "broadcast": "",
+                                    "netmask": "255.0.0.0",
+                                    "network": "127.0.0.0",
+                                    "prefix": "8"
+                                },
+                                "ipv6": [
+                                    {
+                                        "address": "::1",
+                                        "prefix": "128",
+                                        "scope": "host"
+                                    }
+                                ],
+                                "mtu": 65536,
+                                "promisc": false,
+                                "timestamping": [],
+                                "type": "loopback"
+                            },
+                            "ansible_loadavg": {
+                                "15m": 0.01,
+                                "1m": 0.15,
+                                "5m": 0.05
+                            },
+                            "ansible_local": {},
+                            "ansible_locally_reachable_ips": {
+                                "ipv4": [
+                                    "127.0.0.0/8",
+                                    "127.0.0.1",
+                                    "192.168.111.136"
+                                ],
+                                "ipv6": [
+                                    "::1",
+                                    "fe80::20c:29ff:fe76:6295"
+                                ]
+                            },
+                            "ansible_lsb": {},
+                            "ansible_lvm": {
+                                "lvs": {
+                                    "home": {
+                                        "size_g": "10.00",
+                                        "vg": "rhel"
+                                    },
+                                    "opt": {
+                                        "size_g": "5.00",
+                                        "vg": "rhel"
+                                    },
+                                    "root": {
+                                        "size_g": "10.00",
+                                        "vg": "rhel"
+                                    },
+                                    "swap": {
+                                        "size_g": "4.00",
+                                        "vg": "rhel"
+                                    },
+                                    "tmp": {
+                                        "size_g": "2.00",
+                                        "vg": "rhel"
+                                    },
+                                    "usr": {
+                                        "size_g": "5.00",
+                                        "vg": "rhel"
+                                    },
+                                    "var": {
+                                        "size_g": "20.00",
+                                        "vg": "rhel"
+                                    }
+                                },
+                                "pvs": {
+                                    "/dev/nvme0n1p3": {
+                                        "free_g": "43.00",
+                                        "size_g": "99.00",
+                                        "vg": "rhel"
+                                    }
+                                },
+                                "vgs": {
+                                    "rhel": {
+                                        "free_g": "43.00",
+                                        "num_lvs": "7",
+                                        "num_pvs": "1",
+                                        "size_g": "99.00"
+                                    }
+                                }
+                            },
+                            "ansible_machine": "x86_64",
+                            "ansible_machine_id": "49feb0e6d77b4a52b8fe4d157102da90",
+                            "ansible_memfree_mb": 1689,
+                            "ansible_memory_mb": {
+                                "nocache": {
+                                    "free": 2318,
+                                    "used": 1304
+                                },
+                                "real": {
+                                    "free": 1689,
+                                    "total": 3622,
+                                    "used": 1933
+                                },
+                                "swap": {
+                                    "cached": 0,
+                                    "free": 4095,
+                                    "total": 4095,
+                                    "used": 0
+                                }
+                            },
+                            "ansible_memtotal_mb": 3622,
+                            "ansible_mounts": [
+                                {
+                                    "block_available": 2570540,
+                                    "block_size": 4096,
+                                    "block_total": 2605056,
+                                    "block_used": 34516,
+                                    "device": "/dev/mapper/rhel-root",
+                                    "fstype": "xfs",
+                                    "inode_available": 5240466,
+                                    "inode_total": 5242880,
+                                    "inode_used": 2414,
+                                    "mount": "/",
+                                    "options": "rw,seclabel,relatime,attr2,inode64,logbufs=8,logbsize=32k,noquota",
+                                    "size_available": 10528931840,
+                                    "size_total": 10670309376,
+                                    "uuid": "6addf5e3-70b9-46b8-938f-4b7c50f50f27"
+                                },
+                                {
+                                    "block_available": 165482,
+                                    "block_size": 4096,
+                                    "block_total": 1294336,
+                                    "block_used": 1128854,
+                                    "device": "/dev/mapper/rhel-usr",
+                                    "fstype": "xfs",
+                                    "inode_available": 1323944,
+                                    "inode_total": 1456784,
+                                    "inode_used": 132840,
+                                    "mount": "/usr",
+                                    "options": "rw,seclabel,relatime,attr2,inode64,logbufs=8,logbsize=32k,noquota",
+                                    "size_available": 677814272,
+                                    "size_total": 5301600256,
+                                    "uuid": "a9e75875-2bf8-40d6-911d-e7fda3e06c4d"
+                                },
+                                {
+                                    "block_available": 25995,
+                                    "block_size": 4096,
+                                    "block_total": 114688,
+                                    "block_used": 88693,
+                                    "device": "/dev/nvme0n1p2",
+                                    "fstype": "xfs",
+                                    "inode_available": 208193,
+                                    "inode_total": 208216,
+                                    "inode_used": 23,
+                                    "mount": "/boot",
+                                    "options": "rw,seclabel,relatime,attr2,inode64,logbufs=8,logbsize=32k,noquota",
+                                    "size_available": 106475520,
+                                    "size_total": 469762048,
+                                    "uuid": "0bd65017-01ff-4ad1-b0e4-4e917be625fb"
+                                },
+                                {
+                                    "block_available": 2575526,
+                                    "block_size": 4096,
+                                    "block_total": 2605056,
+                                    "block_used": 29530,
+                                    "device": "/dev/mapper/rhel-home",
+                                    "fstype": "xfs",
+                                    "inode_available": 5242583,
+                                    "inode_total": 5242880,
+                                    "inode_used": 297,
+                                    "mount": "/home",
+                                    "options": "rw,seclabel,relatime,attr2,inode64,logbufs=8,logbsize=32k,noquota",
+                                    "size_available": 10549354496,
+                                    "size_total": 10670309376,
+                                    "uuid": "d28b4a6d-5fc8-4e8f-8893-0c150660497e"
+                                },
+                                {
+                                    "block_available": 1277047,
+                                    "block_size": 4096,
+                                    "block_total": 1294336,
+                                    "block_used": 17289,
+                                    "device": "/dev/mapper/rhel-opt",
+                                    "fstype": "xfs",
+                                    "inode_available": 2621437,
+                                    "inode_total": 2621440,
+                                    "inode_used": 3,
+                                    "mount": "/opt",
+                                    "options": "rw,seclabel,relatime,attr2,inode64,logbufs=8,logbsize=32k,noquota",
+                                    "size_available": 5230784512,
+                                    "size_total": 5301600256,
+                                    "uuid": "aec73735-fb7e-4356-8207-50395d64e1b2"
+                                },
+                                {
+                                    "block_available": 496017,
+                                    "block_size": 4096,
+                                    "block_total": 507904,
+                                    "block_used": 11887,
+                                    "device": "/dev/mapper/rhel-tmp",
+                                    "fstype": "xfs",
+                                    "inode_available": 1048535,
+                                    "inode_total": 1048576,
+                                    "inode_used": 41,
+                                    "mount": "/tmp",
+                                    "options": "rw,seclabel,relatime,attr2,inode64,logbufs=8,logbsize=32k,noquota",
+                                    "size_available": 2031685632,
+                                    "size_total": 2080374784,
+                                    "uuid": "b745dfef-9ecf-495c-a4e8-aa936a575a6d"
+                                },
+                                {
+                                    "block_available": 5131505,
+                                    "block_size": 4096,
+                                    "block_total": 5226496,
+                                    "block_used": 94991,
+                                    "device": "/dev/mapper/rhel-var",
+                                    "fstype": "xfs",
+                                    "inode_available": 10483453,
+                                    "inode_total": 10485760,
+                                    "inode_used": 2307,
+                                    "mount": "/var",
+                                    "options": "rw,seclabel,relatime,attr2,inode64,logbufs=8,logbsize=32k,noquota",
+                                    "size_available": 21018644480,
+                                    "size_total": 21407727616,
+                                    "uuid": "8d05db58-c210-49a1-b50a-6ba938717259"
+                                },
+                                {
+                                    "block_available": 129007,
+                                    "block_size": 4096,
+                                    "block_total": 130812,
+                                    "block_used": 1805,
+                                    "device": "/dev/nvme0n1p1",
+                                    "fstype": "vfat",
+                                    "inode_available": 0,
+                                    "inode_total": 0,
+                                    "inode_used": 0,
+                                    "mount": "/boot/efi",
+                                    "options": "rw,relatime,fmask=0077,dmask=0077,codepage=437,iocharset=ascii,shortname=winnt,errors=remount-ro",
+                                    "size_available": 528412672,
+                                    "size_total": 535805952,
+                                    "uuid": "ACFC-EDFF"
+                                },
+                                {
+                                    "block_available": 0,
+                                    "block_size": 4096,
+                                    "block_total": 0,
+                                    "block_used": 0,
+                                    "device": "/etc/auto.misc",
+                                    "fstype": "autofs",
+                                    "inode_available": 0,
+                                    "inode_total": 0,
+                                    "inode_used": 0,
+                                    "mount": "/misc",
+                                    "options": "rw,relatime,fd=7,pgrp=1510,timeout=300,minproto=5,maxproto=5,indirect,pipe_ino=30923",
+                                    "size_available": 0,
+                                    "size_total": 0,
+                                    "uuid": "N/A"
+                                },
+                                {
+                                    "block_available": 0,
+                                    "block_size": 2048,
+                                    "block_total": 6231087,
+                                    "block_used": 6231087,
+                                    "device": "/dev/sr0",
+                                    "fstype": "iso9660",
+                                    "inode_available": 0,
+                                    "inode_total": 0,
+                                    "inode_used": 0,
+                                    "mount": "/run/media/devops/RHEL-9-6-0-BaseOS-x86_64",
+                                    "options": "ro,nosuid,nodev,relatime,nojoliet,check=s,map=n,blocksize=2048,uid=1000,gid=1000,dmode=500,fmode=400",
+                                    "size_available": 0,
+                                    "size_total": 12761266176,
+                                    "uuid": "2025-04-08-23-13-43-00"
+                                },
+                                {
+                                    "device": "/etc/auto.direct",
+                                    "fstype": "autofs",
+                                    "mount": "/remotedata",
+                                    "note": "Could not get extra information due to timeout",
+                                    "options": "rw,relatime,fd=13,pgrp=1510,timeout=300,minproto=5,maxproto=5,direct,pipe_ino=32997"
+                                }
+                            ],
+                            "ansible_nodename": "serverb.example.com",
+                            "ansible_os_family": "RedHat",
+                            "ansible_pkg_mgr": "dnf",
+                            "ansible_proc_cmdline": {
+                                "BOOT_IMAGE": "(hd0,gpt2)/vmlinuz-5.14.0-570.12.1.el9_6.x86_64",
+                                "crashkernel": "1G-4G:192M,4G-64G:256M,64G-:512M",
+                                "quiet": true,
+                                "rd.lvm.lv": [
+                                    "rhel/root",
+                                    "rhel/swap",
+                                    "rhel/usr"
+                                ],
+                                "resume": "/dev/mapper/rhel-swap",
+                                "rhgb": true,
+                                "ro": true,
+                                "root": "/dev/mapper/rhel-root"
+                            },
+                            "ansible_processor": [
+                                "0",
+                                "GenuineIntel",
+                                "Intel(R) Core(TM) i7-7820HQ CPU @ 2.90GHz",
+                                "1",
+                                "GenuineIntel",
+                                "Intel(R) Core(TM) i7-7820HQ CPU @ 2.90GHz",
+                                "2",
+                                "GenuineIntel",
+                                "Intel(R) Core(TM) i7-7820HQ CPU @ 2.90GHz",
+                                "3",
+                                "GenuineIntel",
+                                "Intel(R) Core(TM) i7-7820HQ CPU @ 2.90GHz"
+                            ],
+                            "ansible_processor_cores": 1,
+                            "ansible_processor_count": 4,
+                            "ansible_processor_nproc": 4,
+                            "ansible_processor_threads_per_core": 1,
+                            "ansible_processor_vcpus": 4,
+                            "ansible_product_name": "VMware20,1",
+                            "ansible_product_serial": "VMware-56 4d b4 90 34 15 d9 e5-67 02 72 46 41 76 62 95",
+                            "ansible_product_uuid": "90b44d56-1534-e5d9-6702-724641766295",
+                            "ansible_product_version": "None",
+                            "ansible_python": {
+                                "executable": "/usr/bin/python3",
+                                "has_sslcontext": true,
+                                "type": "cpython",
+                                "version": {
+                                    "major": 3,
+                                    "micro": 21,
+                                    "minor": 9,
+                                    "releaselevel": "final",
+                                    "serial": 0
+                                },
+                                "version_info": [
+                                    3,
+                                    9,
+                                    21,
+                                    "final",
+                                    0
+                                ]
+                            },
+                            "ansible_python_version": "3.9.21",
+                            "ansible_real_group_id": 0,
+                            "ansible_real_user_id": 0,
+                            "ansible_selinux": {
+                                "config_mode": "enforcing",
+                                "mode": "enforcing",
+                                "policyvers": 33,
+                                "status": "enabled",
+                                "type": "targeted"
+                            },
+                            "ansible_selinux_python_present": true,
+                            "ansible_service_mgr": "systemd",
+                            "ansible_ssh_host_key_ecdsa_public": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBAwMXiVLLMj28rrrGfMhiU5v8LYvFST4Q7zSe+RbYZXHC6fN2dc68s8V9f1leoAsb8/7AWUDU/pQ/ZAVRTKcihg=",
+                            "ansible_ssh_host_key_ecdsa_public_keytype": "ecdsa-sha2-nistp256",
+                            "ansible_ssh_host_key_ed25519_public": "AAAAC3NzaC1lZDI1NTE5AAAAINDzhPfhyheZXXYDb4oeiBATKeaQ2NFShMo5p586yApR",
+                            "ansible_ssh_host_key_ed25519_public_keytype": "ssh-ed25519",
+                            "ansible_ssh_host_key_rsa_public": "AAAAB3NzaC1yc2EAAAADAQABAAABgQDw42erxchCBVuVHPVAmYOpZNFw51k0BJryWOX24bFSCfLnFruN03U4HUARjceMg/E21z5xJISOIu9wz6/noQjZtQNzAvN4kGEY+aCnCo5o9ZGSKFRlGZyFlxxS9i9M1mGwLRWWZbv0nI9uE4/SuzAIEKclXec7YbJTOUQYOyR81IaTlos3Phsi7HYVN3rzezuJjnXDMQ/fYDdnVAQwL6rO3Y0MGCkQmFE5xviQRhN9PL/YC0C5GQr13wov5tWRYJZ21lViTyes7ZBmV/JLPgYIsocMwqzdkp+uQfQr/l+S4dm6wtP2uRaR9BkHwmZ28RCYG6AMI49skgt2qHyYOOwcbjF73AfscrIoJGC/WNqrXlMagj4SvNH8mxUHwgbWbs9vSgfzgcThGy9lkrEtM91+Qx/khsWn+G2WHagXsDZQp+OToOfd0ylkYepbnnPeJSJAg0z+4H8HctXOoMhz0PZJgJy/ub/LmieRyoFG9r8mT28zQqa1jG3YNXfS1FnCQbM=",
+                            "ansible_ssh_host_key_rsa_public_keytype": "ssh-rsa",
+                            "ansible_swapfree_mb": 4095,
+                            "ansible_swaptotal_mb": 4095,
+                            "ansible_system": "Linux",
+                            "ansible_system_capabilities": [],
+                            "ansible_system_capabilities_enforced": "False",
+                            "ansible_system_vendor": "VMware, Inc.",
+                            "ansible_uptime_seconds": 6291,
+                            "ansible_user_dir": "/root",
+                            "ansible_user_gecos": "root",
+                            "ansible_user_gid": 0,
+                            "ansible_user_id": "root",
+                            "ansible_user_shell": "/bin/bash",
+                            "ansible_user_uid": 0,
+                            "ansible_userspace_architecture": "x86_64",
+                            "ansible_userspace_bits": "64",
+                            "ansible_virtualization_role": "guest",
+                            "ansible_virtualization_tech_guest": [
+                                "VMware"
+                            ],
+                            "ansible_virtualization_tech_host": [],
+                            "ansible_virtualization_type": "VMware",
+                            "discovered_interpreter_python": "/usr/bin/python3",
+                            "gather_subset": [
+                                "all"
+                            ],
+                            "module_setup": true
+                        },
+                        "changed": false,
+                        "deprecations": [],
+                        "warnings": [
+                            "Timeout exceeded when getting mount info for /remotedata"
+                        ]
+                    },
+                    "resolved_action": "ansible.builtin.gather_facts",
+                    "start": "2025-12-31T15:27:34.843956+00:00",
+                    "task": "Gathering Facts",
+                    "task_action": "gather_facts",
+                    "task_args": "",
+                    "task_path": "/root/monitoring-project/playbooks/node_exporter.yml:2",
+                    "task_uuid": "261a397b-a0d8-4e24-cf2f-00000000000b",
+                    "uuid": "96eabc9a-3560-4430-a62f-c2e26825c84a"
+                },
+                {
+                    "__changed": true,
+                    "__duration": "12s",
+                    "__host": "node1",
+                    "__number": 1,
+                    "__result": "Ok",
+                    "__task": "Pull latest Node Exporter image",
+                    "__task_action": "containers.podman.podman_image",
+                    "duration": 12.408891,
+                    "end": "2025-12-31T15:27:59.600862+00:00",
+                    "event_loop": null,
+                    "host": "node1",
+                    "play": "Install and Run Node Exporter on nodes",
+                    "play_pattern": "nodes",
+                    "play_uuid": "261a397b-a0d8-4e24-cf2f-000000000003",
+                    "playbook": "/root/monitoring-project/playbooks/node_exporter.yml",
+                    "playbook_uuid": "2196d250-ea64-4419-9653-730453ab880c",
+                    "remote_addr": "node1",
+                    "res": {
+                        "_ansible_no_log": null,
+                        "actions": [
+                            "Pulled image prom/node-exporter:latest"
+                        ],
+                        "changed": true,
+                        "image": [
+                            {
+                                "Annotations": {},
+                                "Architecture": "amd64",
+                                "Author": "The Prometheus Authors <prometheus-developers@googlegroups.com>",
+                                "Comment": "",
+                                "Config": {
+                                    "Entrypoint": [
+                                        "/bin/node_exporter"
+                                    ],
+                                    "Env": [
+                                        "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+                                    ],
+                                    "ExposedPorts": {
+                                        "9100/tcp": {}
+                                    },
+                                    "Labels": {
+                                        "maintainer": "The Prometheus Authors <prometheus-developers@googlegroups.com>"
+                                    },
+                                    "User": "nobody"
+                                },
+                                "Created": "2025-10-25T20:11:06.221677387Z",
+                                "Digest": "sha256:3ac34ce007accad95afed72149e0d2b927b7e42fd1c866149b945b84737c62c3",
+                                "GraphDriver": {
+                                    "Data": {
+                                        "LowerDir": "/var/lib/containers/storage/overlay/b4f761d90eeb5a4c1ea51e856783cf8398e02a6caf306b90498250a43e5bbae1/diff:/var/lib/containers/storage/overlay/1e604deea57dbda554a168861cff1238f93b8c6c69c863c43aed37d9d99c5fed/diff",
+                                        "UpperDir": "/var/lib/containers/storage/overlay/ec38ed02845076b12d5faeb911516aedc028bffb172fe2bda5fe36714c8078af/diff",
+                                        "WorkDir": "/var/lib/containers/storage/overlay/ec38ed02845076b12d5faeb911516aedc028bffb172fe2bda5fe36714c8078af/work"
+                                    },
+                                    "Name": "overlay"
+                                },
+                                "History": [
+                                    {
+                                        "created": "2023-12-05T20:23:06.467739954Z",
+                                        "created_by": "/bin/sh -c #(nop) ADD file:ee9bb8755ccbdd689b434d9b4ac7518e972699604ecda33e4ddc2a15d2831443 in / "
+                                    },
+                                    {
+                                        "created": "2023-12-05T20:23:06.550971969Z",
+                                        "created_by": "/bin/sh -c #(nop)  CMD [\"sh\"]",
+                                        "empty_layer": true
+                                    },
+                                    {
+                                        "comment": "buildkit.dockerfile.v0",
+                                        "created": "2023-12-15T10:54:58.99835989Z",
+                                        "created_by": "MAINTAINER The Prometheus Authors <prometheus-developers@googlegroups.com>",
+                                        "empty_layer": true
+                                    },
+                                    {
+                                        "comment": "buildkit.dockerfile.v0",
+                                        "created": "2023-12-15T10:54:58.99835989Z",
+                                        "created_by": "COPY /rootfs / # buildkit"
+                                    },
+                                    {
+                                        "comment": "buildkit.dockerfile.v0",
+                                        "created": "2025-10-25T20:11:06.221677387Z",
+                                        "created_by": "LABEL maintainer=The Prometheus Authors <prometheus-developers@googlegroups.com>",
+                                        "empty_layer": true
+                                    },
+                                    {
+                                        "comment": "buildkit.dockerfile.v0",
+                                        "created": "2025-10-25T20:11:06.221677387Z",
+                                        "created_by": "ARG ARCH=amd64",
+                                        "empty_layer": true
+                                    },
+                                    {
+                                        "comment": "buildkit.dockerfile.v0",
+                                        "created": "2025-10-25T20:11:06.221677387Z",
+                                        "created_by": "ARG OS=linux",
+                                        "empty_layer": true
+                                    },
+                                    {
+                                        "comment": "buildkit.dockerfile.v0",
+                                        "created": "2025-10-25T20:11:06.221677387Z",
+                                        "created_by": "COPY .build/linux-amd64/node_exporter /bin/node_exporter # buildkit"
+                                    },
+                                    {
+                                        "comment": "buildkit.dockerfile.v0",
+                                        "created": "2025-10-25T20:11:06.221677387Z",
+                                        "created_by": "EXPOSE &{[{{10 0} {10 0}}] 0xc0009cb840}",
+                                        "empty_layer": true
+                                    },
+                                    {
+                                        "comment": "buildkit.dockerfile.v0",
+                                        "created": "2025-10-25T20:11:06.221677387Z",
+                                        "created_by": "USER nobody",
+                                        "empty_layer": true
+                                    },
+                                    {
+                                        "comment": "buildkit.dockerfile.v0",
+                                        "created": "2025-10-25T20:11:06.221677387Z",
+                                        "created_by": "ENTRYPOINT [\"/bin/node_exporter\"]",
+                                        "empty_layer": true
+                                    }
+                                ],
+                                "Id": "696e69e899e068f4df3ebafc08a3fd025eed498271ce6160dad97097311fa574",
+                                "Labels": {
+                                    "maintainer": "The Prometheus Authors <prometheus-developers@googlegroups.com>"
+                                },
+                                "ManifestType": "application/vnd.docker.distribution.manifest.v2+json",
+                                "NamesHistory": [
+                                    "docker.io/prom/node-exporter:latest"
+                                ],
+                                "Os": "linux",
+                                "Parent": "",
+                                "RepoDigests": [
+                                    "docker.io/prom/node-exporter@sha256:3ac34ce007accad95afed72149e0d2b927b7e42fd1c866149b945b84737c62c3",
+                                    "docker.io/prom/node-exporter@sha256:7bcf2839f207d926b908cd3c566c9f1577efb72268062be0c96cd3b17a5cb283"
+                                ],
+                                "RepoTags": [
+                                    "docker.io/prom/node-exporter:latest"
+                                ],
+                                "RootFS": {
+                                    "Layers": [
+                                        "sha256:1e604deea57dbda554a168861cff1238f93b8c6c69c863c43aed37d9d99c5fed",
+                                        "sha256:6b83872188a9e8912bee1d43add5e9bc518601b02a14a364c0da43b0d59acf33",
+                                        "sha256:4a198d6ad47ec1b67f3743c53f4b1a7f9fce4a60e063fe9673c3dfbb1d1abe23"
+                                    ],
+                                    "Type": "layers"
+                                },
+                                "Size": 26839868,
+                                "User": "nobody",
+                                "Version": "",
+                                "VirtualSize": 26839868
+                            }
+                        ],
+                        "invocation": {
+                            "module_args": {
+                                "arch": null,
+                                "auth_file": null,
+                                "build": {
+                                    "annotation": null,
+                                    "cache": true,
+                                    "extra_args": null,
+                                    "file": null,
+                                    "force_rm": false,
+                                    "format": "oci",
+                                    "rm": true,
+                                    "target": null,
+                                    "volume": null
+                                },
+                                "ca_cert_dir": null,
+                                "executable": "podman",
+                                "force": false,
+                                "name": "prom/node-exporter:latest",
+                                "password": null,
+                                "path": null,
+                                "pull": true,
+                                "push": false,
+                                "push_args": {
+                                    "compress": null,
+                                    "dest": null,
+                                    "format": null,
+                                    "remove_signatures": null,
+                                    "sign_by": null,
+                                    "transport": null
+                                },
+                                "state": "present",
+                                "tag": "latest",
+                                "username": null,
+                                "validate_certs": null
+                            }
+                        },
+                        "podman_actions": [
+                            "/bin/podman image ls prom/node-exporter:latest --format json",
+                            "/bin/podman image exists prom/node-exporter:latest",
+                            "/bin/podman pull prom/node-exporter:latest -q",
+                            "/bin/podman inspect 696e69e899e068f4df3ebafc08a3fd025eed498271ce6160dad97097311fa574 --format json"
+                        ],
+                        "stdout": "",
+                        "stdout_lines": []
+                    },
+                    "resolved_action": "containers.podman.podman_image",
+                    "start": "2025-12-31T15:27:47.191971+00:00",
+                    "task": "Pull latest Node Exporter image",
+                    "task_action": "containers.podman.podman_image",
+                    "task_args": "",
+                    "task_path": "/root/monitoring-project/playbooks/node_exporter.yml:7",
+                    "task_uuid": "261a397b-a0d8-4e24-cf2f-000000000005",
+                    "uuid": "d35dc868-4478-4712-b53e-dd3108cac631"
+                },
+                {
+                    "__changed": true,
+                    "__duration": "2s",
+                    "__host": "node1",
+                    "__number": 2,
+                    "__result": "Ok",
+                    "__task": "Run Node Exporter container",
+                    "__task_action": "containers.podman.podman_container",
+                    "duration": 2.340105,
+                    "end": "2025-12-31T15:28:01.956048+00:00",
+                    "event_loop": null,
+                    "host": "node1",
+                    "play": "Install and Run Node Exporter on nodes",
+                    "play_pattern": "nodes",
+                    "play_uuid": "261a397b-a0d8-4e24-cf2f-000000000003",
+                    "playbook": "/root/monitoring-project/playbooks/node_exporter.yml",
+                    "playbook_uuid": "2196d250-ea64-4419-9653-730453ab880c",
+                    "remote_addr": "node1",
+                    "res": {
+                        "_ansible_no_log": null,
+                        "actions": [
+                            "started node-exporter"
+                        ],
+                        "changed": true,
+                        "container": {
+                            "AppArmorProfile": "",
+                            "Args": [
+                                "/bin/node_exporter"
+                            ],
+                            "BoundingCaps": [
+                                "CAP_CHOWN",
+                                "CAP_DAC_OVERRIDE",
+                                "CAP_FOWNER",
+                                "CAP_FSETID",
+                                "CAP_KILL",
+                                "CAP_NET_BIND_SERVICE",
+                                "CAP_SETFCAP",
+                                "CAP_SETGID",
+                                "CAP_SETPCAP",
+                                "CAP_SETUID",
+                                "CAP_SYS_CHROOT"
+                            ],
+                            "Config": {
+                                "Annotations": {
+                                    "io.container.manager": "libpod",
+                                    "org.opencontainers.image.stopSignal": "15",
+                                    "org.systemd.property.KillSignal": "15",
+                                    "org.systemd.property.TimeoutStopUSec": "uint64 10000000"
+                                },
+                                "AttachStderr": false,
+                                "AttachStdin": false,
+                                "AttachStdout": false,
+                                "Cmd": null,
+                                "CreateCommand": [
+                                    "podman",
+                                    "container",
+                                    "run",
+                                    "--name",
+                                    "node-exporter",
+                                    "--restart=unless-stopped",
+                                    "--publish",
+                                    "9100:9100",
+                                    "--detach=True",
+                                    "prom/node-exporter:latest"
+                                ],
+                                "Domainname": "",
+                                "Entrypoint": [
+                                    "/bin/node_exporter"
+                                ],
+                                "Env": [
+                                    "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                                    "container=podman",
+                                    "HOME=/home",
+                                    "HOSTNAME=73e39ff1ad1b"
+                                ],
+                                "ExposedPorts": {
+                                    "9100/tcp": {}
+                                },
+                                "HealthLogDestination": "local",
+                                "HealthcheckMaxLogCount": 5,
+                                "HealthcheckMaxLogSize": 500,
+                                "HealthcheckOnFailureAction": "none",
+                                "Hostname": "73e39ff1ad1b",
+                                "Image": "docker.io/prom/node-exporter:latest",
+                                "Labels": {
+                                    "maintainer": "The Prometheus Authors <prometheus-developers@googlegroups.com>"
+                                },
+                                "OnBuild": null,
+                                "OpenStdin": false,
+                                "Passwd": true,
+                                "StdinOnce": false,
+                                "StopSignal": "SIGTERM",
+                                "StopTimeout": 10,
+                                "Timeout": 0,
+                                "Tty": false,
+                                "Umask": "0022",
+                                "User": "nobody",
+                                "Volumes": null,
+                                "WorkingDir": "/",
+                                "sdNotifyMode": "container"
+                            },
+                            "ConmonPidFile": "/run/containers/storage/overlay-containers/73e39ff1ad1b21d2e56fed28600ae81c119627852f1ba8e1dc6b17a2e291c13d/userdata/conmon.pid",
+                            "Created": "2025-12-31T17:28:01.213269783+02:00",
+                            "Dependencies": [],
+                            "Driver": "overlay",
+                            "EffectiveCaps": null,
+                            "ExecIDs": [],
+                            "GraphDriver": {
+                                "Data": {
+                                    "LowerDir": "/var/lib/containers/storage/overlay/ec38ed02845076b12d5faeb911516aedc028bffb172fe2bda5fe36714c8078af/diff:/var/lib/containers/storage/overlay/b4f761d90eeb5a4c1ea51e856783cf8398e02a6caf306b90498250a43e5bbae1/diff:/var/lib/containers/storage/overlay/1e604deea57dbda554a168861cff1238f93b8c6c69c863c43aed37d9d99c5fed/diff",
+                                    "MergedDir": "/var/lib/containers/storage/overlay/cac8bfbc349504ba0f28dac7b8b16a7bb7cb69ae63f26cc65acc17009a0403b5/merged",
+                                    "UpperDir": "/var/lib/containers/storage/overlay/cac8bfbc349504ba0f28dac7b8b16a7bb7cb69ae63f26cc65acc17009a0403b5/diff",
+                                    "WorkDir": "/var/lib/containers/storage/overlay/cac8bfbc349504ba0f28dac7b8b16a7bb7cb69ae63f26cc65acc17009a0403b5/work"
+                                },
+                                "Name": "overlay"
+                            },
+                            "HostConfig": {
+                                "Annotations": {
+                                    "io.container.manager": "libpod",
+                                    "org.opencontainers.image.stopSignal": "15",
+                                    "org.systemd.property.KillSignal": "15",
+                                    "org.systemd.property.TimeoutStopUSec": "uint64 10000000"
+                                },
+                                "AutoRemove": false,
+                                "AutoRemoveImage": false,
+                                "Binds": [],
+                                "BlkioDeviceReadBps": null,
+                                "BlkioDeviceReadIOps": null,
+                                "BlkioDeviceWriteBps": null,
+                                "BlkioDeviceWriteIOps": null,
+                                "BlkioWeight": 0,
+                                "BlkioWeightDevice": null,
+                                "CapAdd": [],
+                                "CapDrop": [],
+                                "Cgroup": "",
+                                "CgroupConf": null,
+                                "CgroupManager": "systemd",
+                                "CgroupMode": "private",
+                                "CgroupParent": "",
+                                "Cgroups": "default",
+                                "ConsoleSize": [
+                                    0,
+                                    0
+                                ],
+                                "ContainerIDFile": "",
+                                "CpuCount": 0,
+                                "CpuPercent": 0,
+                                "CpuPeriod": 0,
+                                "CpuQuota": 0,
+                                "CpuRealtimePeriod": 0,
+                                "CpuRealtimeRuntime": 0,
+                                "CpuShares": 0,
+                                "CpusetCpus": "",
+                                "CpusetMems": "",
+                                "Devices": [],
+                                "DiskQuota": 0,
+                                "Dns": [],
+                                "DnsOptions": [],
+                                "DnsSearch": [],
+                                "ExtraHosts": [],
+                                "GroupAdd": [],
+                                "HostsFile": "",
+                                "IOMaximumBandwidth": 0,
+                                "IOMaximumIOps": 0,
+                                "IpcMode": "shareable",
+                                "Isolation": "",
+                                "KernelMemory": 0,
+                                "Links": null,
+                                "LogConfig": {
+                                    "Config": null,
+                                    "Path": "",
+                                    "Size": "0B",
+                                    "Tag": "",
+                                    "Type": "journald"
+                                },
+                                "Memory": 0,
+                                "MemoryReservation": 0,
+                                "MemorySwap": 0,
+                                "MemorySwappiness": 0,
+                                "NanoCpus": 0,
+                                "NetworkMode": "bridge",
+                                "OomKillDisable": false,
+                                "OomScoreAdj": 0,
+                                "PidMode": "private",
+                                "PidsLimit": 2048,
+                                "PortBindings": {
+                                    "9100/tcp": [
+                                        {
+                                            "HostIp": "0.0.0.0",
+                                            "HostPort": "9100"
+                                        }
+                                    ]
+                                },
+                                "Privileged": false,
+                                "PublishAllPorts": false,
+                                "ReadonlyRootfs": false,
+                                "RestartPolicy": {
+                                    "MaximumRetryCount": 0,
+                                    "Name": "unless-stopped"
+                                },
+                                "Runtime": "oci",
+                                "SecurityOpt": [],
+                                "ShmSize": 65536000,
+                                "Tmpfs": {},
+                                "UTSMode": "private",
+                                "Ulimits": [
+                                    {
+                                        "Hard": 1048576,
+                                        "Name": "RLIMIT_NOFILE",
+                                        "Soft": 1048576
+                                    },
+                                    {
+                                        "Hard": 1048576,
+                                        "Name": "RLIMIT_NPROC",
+                                        "Soft": 1048576
+                                    }
+                                ],
+                                "UsernsMode": "",
+                                "VolumeDriver": "",
+                                "VolumesFrom": null
+                            },
+                            "HostnamePath": "/run/containers/storage/overlay-containers/73e39ff1ad1b21d2e56fed28600ae81c119627852f1ba8e1dc6b17a2e291c13d/userdata/hostname",
+                            "HostsPath": "/run/containers/storage/overlay-containers/73e39ff1ad1b21d2e56fed28600ae81c119627852f1ba8e1dc6b17a2e291c13d/userdata/hosts",
+                            "Id": "73e39ff1ad1b21d2e56fed28600ae81c119627852f1ba8e1dc6b17a2e291c13d",
+                            "Image": "696e69e899e068f4df3ebafc08a3fd025eed498271ce6160dad97097311fa574",
+                            "ImageDigest": "sha256:3ac34ce007accad95afed72149e0d2b927b7e42fd1c866149b945b84737c62c3",
+                            "ImageName": "docker.io/prom/node-exporter:latest",
+                            "IsInfra": false,
+                            "IsService": false,
+                            "KubeExitCodePropagation": "invalid",
+                            "MountLabel": "system_u:object_r:container_file_t:s0:c357,c585",
+                            "Mounts": [],
+                            "Name": "node-exporter",
+                            "Namespace": "",
+                            "NetworkSettings": {
+                                "Bridge": "",
+                                "EndpointID": "",
+                                "Gateway": "10.88.0.1",
+                                "GlobalIPv6Address": "",
+                                "GlobalIPv6PrefixLen": 0,
+                                "HairpinMode": false,
+                                "IPAddress": "10.88.0.3",
+                                "IPPrefixLen": 16,
+                                "IPv6Gateway": "",
+                                "LinkLocalIPv6Address": "",
+                                "LinkLocalIPv6PrefixLen": 0,
+                                "MacAddress": "a2:95:8c:d6:d4:4f",
+                                "Networks": {
+                                    "podman": {
+                                        "Aliases": [
+                                            "73e39ff1ad1b"
+                                        ],
+                                        "DriverOpts": null,
+                                        "EndpointID": "",
+                                        "Gateway": "10.88.0.1",
+                                        "GlobalIPv6Address": "",
+                                        "GlobalIPv6PrefixLen": 0,
+                                        "IPAMConfig": null,
+                                        "IPAddress": "10.88.0.3",
+                                        "IPPrefixLen": 16,
+                                        "IPv6Gateway": "",
+                                        "Links": null,
+                                        "MacAddress": "a2:95:8c:d6:d4:4f",
+                                        "NetworkID": "2f259bab93aaaaa2542ba43ef33eb990d0999ee1b9924b557b7be53c0b7a1bb9"
+                                    }
+                                },
+                                "Ports": {
+                                    "9100/tcp": [
+                                        {
+                                            "HostIp": "0.0.0.0",
+                                            "HostPort": "9100"
+                                        }
+                                    ]
+                                },
+                                "SandboxID": "",
+                                "SandboxKey": "/run/netns/netns-1af84495-60c2-4435-66b0-4962316807a1"
+                            },
+                            "OCIConfigPath": "/var/lib/containers/storage/overlay-containers/73e39ff1ad1b21d2e56fed28600ae81c119627852f1ba8e1dc6b17a2e291c13d/userdata/config.json",
+                            "OCIRuntime": "crun",
+                            "Path": "/bin/node_exporter",
+                            "PidFile": "/run/containers/storage/overlay-containers/73e39ff1ad1b21d2e56fed28600ae81c119627852f1ba8e1dc6b17a2e291c13d/userdata/pidfile",
+                            "Pod": "",
+                            "ProcessLabel": "system_u:system_r:container_t:s0:c357,c585",
+                            "ResolvConfPath": "/run/containers/storage/overlay-containers/73e39ff1ad1b21d2e56fed28600ae81c119627852f1ba8e1dc6b17a2e291c13d/userdata/resolv.conf",
+                            "RestartCount": 0,
+                            "Rootfs": "",
+                            "State": {
+                                "CgroupPath": "/machine.slice/libpod-73e39ff1ad1b21d2e56fed28600ae81c119627852f1ba8e1dc6b17a2e291c13d.scope",
+                                "CheckpointedAt": "0001-01-01T00:00:00Z",
+                                "ConmonPid": 7309,
+                                "Dead": false,
+                                "Error": "",
+                                "ExitCode": 0,
+                                "FinishedAt": "0001-01-01T00:00:00Z",
+                                "OOMKilled": false,
+                                "OciVersion": "1.2.0",
+                                "Paused": false,
+                                "Pid": 7311,
+                                "Restarting": false,
+                                "RestoredAt": "0001-01-01T00:00:00Z",
+                                "Running": true,
+                                "StartedAt": "2025-12-31T17:28:01.674766726+02:00",
+                                "Status": "running"
+                            },
+                            "StaticDir": "/var/lib/containers/storage/overlay-containers/73e39ff1ad1b21d2e56fed28600ae81c119627852f1ba8e1dc6b17a2e291c13d/userdata",
+                            "UseImageHostname": false,
+                            "UseImageHosts": false,
+                            "lockNumber": 0
+                        },
+                        "invocation": {
+                            "module_args": {
+                                "annotation": null,
+                                "authfile": null,
+                                "blkio_weight": null,
+                                "blkio_weight_device": null,
+                                "cap_add": null,
+                                "cap_drop": null,
+                                "cgroup_parent": null,
+                                "cgroupns": null,
+                                "cgroups": null,
+                                "cidfile": null,
+                                "cmd_args": null,
+                                "command": null,
+                                "conmon_pidfile": null,
+                                "cpu_period": null,
+                                "cpu_quota": null,
+                                "cpu_rt_period": null,
+                                "cpu_rt_runtime": null,
+                                "cpu_shares": null,
+                                "cpus": null,
+                                "cpuset_cpus": null,
+                                "cpuset_mems": null,
+                                "debug": false,
+                                "detach": true,
+                                "detach_keys": null,
+                                "device": null,
+                                "device_read_bps": null,
+                                "device_read_iops": null,
+                                "device_write_bps": null,
+                                "device_write_iops": null,
+                                "dns": null,
+                                "dns_option": null,
+                                "dns_search": null,
+                                "entrypoint": null,
+                                "env": null,
+                                "env_file": null,
+                                "env_host": null,
+                                "etc_hosts": null,
+                                "executable": "podman",
+                                "expose": null,
+                                "force_restart": false,
+                                "generate_systemd": {},
+                                "gidmap": null,
+                                "group_add": null,
+                                "healthcheck": null,
+                                "healthcheck_failure_action": null,
+                                "healthcheck_interval": null,
+                                "healthcheck_retries": null,
+                                "healthcheck_start_period": null,
+                                "healthcheck_timeout": null,
+                                "hooks_dir": null,
+                                "hostname": null,
+                                "http_proxy": null,
+                                "image": "prom/node-exporter:latest",
+                                "image_strict": false,
+                                "image_volume": null,
+                                "init": null,
+                                "init_path": null,
+                                "interactive": null,
+                                "ip": null,
+                                "ipc": null,
+                                "kernel_memory": null,
+                                "label": null,
+                                "label_file": null,
+                                "log_driver": null,
+                                "log_level": null,
+                                "log_opt": null,
+                                "mac_address": null,
+                                "memory": null,
+                                "memory_reservation": null,
+                                "memory_swap": null,
+                                "memory_swappiness": null,
+                                "mount": null,
+                                "name": "node-exporter",
+                                "network": null,
+                                "network_aliases": null,
+                                "no_hosts": null,
+                                "oom_kill_disable": null,
+                                "oom_score_adj": null,
+                                "pid": null,
+                                "pids_limit": null,
+                                "pod": null,
+                                "ports": [
+                                    "9100:9100"
+                                ],
+                                "privileged": null,
+                                "publish": [
+                                    "9100:9100"
+                                ],
+                                "publish_all": null,
+                                "read_only": null,
+                                "read_only_tmpfs": null,
+                                "recreate": false,
+                                "requires": null,
+                                "restart_policy": "unless-stopped",
+                                "rm": null,
+                                "rootfs": null,
+                                "sdnotify": null,
+                                "secrets": null,
+                                "security_opt": null,
+                                "shm_size": null,
+                                "sig_proxy": null,
+                                "state": "started",
+                                "stop_signal": null,
+                                "stop_timeout": null,
+                                "subgidname": null,
+                                "subuidname": null,
+                                "sysctl": null,
+                                "systemd": null,
+                                "timezone": null,
+                                "tmpfs": null,
+                                "tty": null,
+                                "uidmap": null,
+                                "ulimit": null,
+                                "user": null,
+                                "userns": null,
+                                "uts": null,
+                                "volume": null,
+                                "volumes_from": null,
+                                "workdir": null
+                            }
+                        },
+                        "podman_actions": [
+                            "podman run --name node-exporter --restart=unless-stopped --publish 9100:9100 --detach=True prom/node-exporter:latest"
+                        ],
+                        "podman_systemd": {
+                            "container-node-exporter": "# container-node-exporter.service\n# autogenerated by Podman 5.4.0\n# Wed Dec 31 17:28:01 EET 2025\n\n[Unit]\nDescription=Podman container-node-exporter.service\nDocumentation=man:podman-generate-systemd(1)\nWants=network-online.target\nAfter=network-online.target\nRequiresMountsFor=/run/containers/storage\n\n[Service]\nEnvironment=PODMAN_SYSTEMD_UNIT=%n\nRestart=on-failure\nTimeoutStopSec=70\nExecStart=/usr/bin/podman start node-exporter\nExecStop=/usr/bin/podman stop  \\\n\t-t 10 node-exporter\nExecStopPost=/usr/bin/podman stop  \\\n\t-t 10 node-exporter\nPIDFile=/run/containers/storage/overlay-containers/73e39ff1ad1b21d2e56fed28600ae81c119627852f1ba8e1dc6b17a2e291c13d/userdata/conmon.pid\nType=forking\n\n[Install]\nWantedBy=default.target\n"
+                        },
+                        "stderr": "",
+                        "stderr_lines": [],
+                        "stdout": "73e39ff1ad1b21d2e56fed28600ae81c119627852f1ba8e1dc6b17a2e291c13d\n",
+                        "stdout_lines": [
+                            "73e39ff1ad1b21d2e56fed28600ae81c119627852f1ba8e1dc6b17a2e291c13d"
+                        ]
+                    },
+                    "resolved_action": "containers.podman.podman_container",
+                    "start": "2025-12-31T15:27:59.615943+00:00",
+                    "task": "Run Node Exporter container",
+                    "task_action": "containers.podman.podman_container",
+                    "task_args": "",
+                    "task_path": "/root/monitoring-project/playbooks/node_exporter.yml:12",
+                    "task_uuid": "261a397b-a0d8-4e24-cf2f-000000000006",
+                    "uuid": "a713c775-4e5b-4574-ba7d-e5b06f829096"
+                },
+                {
+                    "__changed": true,
+                    "__duration": "1s",
+                    "__host": "node1",
+                    "__number": 3,
+                    "__result": "Ok",
+                    "__task": "Ensure firewall allows Node Exporter port",
+                    "__task_action": "firewalld",
+                    "duration": 1.335559,
+                    "end": "2025-12-31T15:28:03.305111+00:00",
+                    "event_loop": null,
+                    "host": "node1",
+                    "play": "Install and Run Node Exporter on nodes",
+                    "play_pattern": "nodes",
+                    "play_uuid": "261a397b-a0d8-4e24-cf2f-000000000003",
+                    "playbook": "/root/monitoring-project/playbooks/node_exporter.yml",
+                    "playbook_uuid": "2196d250-ea64-4419-9653-730453ab880c",
+                    "remote_addr": "node1",
+                    "res": {
+                        "_ansible_no_log": null,
+                        "changed": true,
+                        "invocation": {
+                            "module_args": {
+                                "icmp_block": null,
+                                "icmp_block_inversion": null,
+                                "immediate": true,
+                                "interface": null,
+                                "masquerade": null,
+                                "offline": null,
+                                "permanent": true,
+                                "port": "9100/tcp",
+                                "port_forward": null,
+                                "protocol": null,
+                                "rich_rule": null,
+                                "service": null,
+                                "source": null,
+                                "state": "enabled",
+                                "target": null,
+                                "timeout": 0,
+                                "zone": null
+                            }
+                        },
+                        "msg": "Permanent and Non-Permanent(immediate) operation, Changed port 9100/tcp to enabled"
+                    },
+                    "resolved_action": "ansible.posix.firewalld",
+                    "start": "2025-12-31T15:28:01.969552+00:00",
+                    "task": "Ensure firewall allows Node Exporter port",
+                    "task_action": "firewalld",
+                    "task_args": "",
+                    "task_path": "/root/monitoring-project/playbooks/node_exporter.yml:21",
+                    "task_uuid": "261a397b-a0d8-4e24-cf2f-000000000007",
+                    "uuid": "8b20350b-69c0-431f-a4a8-183c43d1a8d2"
+                }
+            ],
+            "uuid": "261a397b-a0d8-4e24-cf2f-000000000003"
+        }
+    ],
+    "settings_entries": {
+        "ansible-navigator": {
+            "ansible": {
+                "config": {
+                    "help": false
+                },
+                "doc": {
+                    "help": false,
+                    "plugin": {
+                        "type": "module"
+                    }
+                },
+                "inventory": {
+                    "entries": [
+                        "/root/monitoring-project/inventory"
+                    ],
+                    "help": false
+                },
+                "playbook": {
+                    "help": false,
+                    "path": "/root/monitoring-project/playbooks/node_exporter.yml"
+                }
+            },
+            "ansible-builder": {
+                "help": false,
+                "workdir": "/root/monitoring-project"
+            },
+            "ansible-runner": {
+                "job-events": false
+            },
+            "app": "run",
+            "collection-doc-cache-path": "/root/.cache/ansible-navigator/collection_doc_cache.db",
+            "color": {
+                "enable": true,
+                "osc4": true
+            },
+            "editor": {
+                "command": "vi +{line_number} {filename}",
+                "console": true
+            },
+            "enable-prompts": false,
+            "exec": {
+                "command": "/bin/bash",
+                "shell": true
+            },
+            "execution-environment": {
+                "container-engine": "docker",
+                "enabled": true,
+                "image": "ghcr.io/ansible/creator-ee:v0.22.0",
+                "pull": {
+                    "policy": "tag"
+                }
+            },
+            "format": "yaml",
+            "images": {
+                "details": [
+                    "everything"
+                ]
+            },
+            "logging": {
+                "append": true,
+                "file": "/root/monitoring-project/ansible-navigator.log",
+                "level": "warning"
+            },
+            "mode": "stdout",
+            "playbook-artifact": {
+                "enable": true,
+                "save-as": "{playbook_dir}/{playbook_name}-artifact-{time_stamp}.json"
+            },
+            "settings": {
+                "effective": false,
+                "sample": false,
+                "schema": "json",
+                "sources": false
+            },
+            "time-zone": "UTC"
+        }
+    },
+    "settings_sources": {
+        "ansible-navigator.ansible-builder.help": "Defaults",
+        "ansible-navigator.ansible-builder.workdir": "Defaults",
+        "ansible-navigator.ansible-lint.config": "Not set",
+        "ansible-navigator.ansible-lint.lintables": "Not set",
+        "ansible-navigator.ansible-runner.artifact-dir": "Not set",
+        "ansible-navigator.ansible-runner.job-events": "Defaults",
+        "ansible-navigator.ansible-runner.rotate-artifacts-count": "Not set",
+        "ansible-navigator.ansible-runner.timeout": "Not set",
+        "ansible-navigator.ansible.cmdline": "Not set",
+        "ansible-navigator.ansible.config.help": "Defaults",
+        "ansible-navigator.ansible.config.path": "Not set",
+        "ansible-navigator.ansible.doc.help": "Defaults",
+        "ansible-navigator.ansible.doc.plugin.name": "Not set",
+        "ansible-navigator.ansible.doc.plugin.type": "Defaults",
+        "ansible-navigator.ansible.inventory.entries": "Command line",
+        "ansible-navigator.ansible.inventory.help": "Defaults",
+        "ansible-navigator.ansible.playbook.help": "Defaults",
+        "ansible-navigator.ansible.playbook.path": "Command line",
+        "ansible-navigator.app": "Command line",
+        "ansible-navigator.collection-doc-cache-path": "Defaults",
+        "ansible-navigator.color.enable": "Defaults",
+        "ansible-navigator.color.osc4": "Defaults",
+        "ansible-navigator.editor.command": "Defaults",
+        "ansible-navigator.editor.console": "Defaults",
+        "ansible-navigator.enable-prompts": "Defaults",
+        "ansible-navigator.exec.command": "Defaults",
+        "ansible-navigator.exec.shell": "Defaults",
+        "ansible-navigator.execution-environment.container-engine": "Automatically determined",
+        "ansible-navigator.execution-environment.container-options": "Not set",
+        "ansible-navigator.execution-environment.enabled": "Defaults",
+        "ansible-navigator.execution-environment.environment-variables.pass": "Not set",
+        "ansible-navigator.execution-environment.environment-variables.set": "Not set",
+        "ansible-navigator.execution-environment.image": "Defaults",
+        "ansible-navigator.execution-environment.pull.arguments": "Not set",
+        "ansible-navigator.execution-environment.pull.policy": "Defaults",
+        "ansible-navigator.execution-environment.volume-mounts": "Not set",
+        "ansible-navigator.format": "Defaults",
+        "ansible-navigator.images.details": "Defaults",
+        "ansible-navigator.inventory-columns": "Not set",
+        "ansible-navigator.logging.append": "Defaults",
+        "ansible-navigator.logging.file": "Defaults",
+        "ansible-navigator.logging.level": "Defaults",
+        "ansible-navigator.mode": "Command line",
+        "ansible-navigator.playbook-artifact.enable": "Defaults",
+        "ansible-navigator.playbook-artifact.replay": "Not set",
+        "ansible-navigator.playbook-artifact.save-as": "Defaults",
+        "ansible-navigator.settings.effective": "Defaults",
+        "ansible-navigator.settings.sample": "Defaults",
+        "ansible-navigator.settings.schema": "Defaults",
+        "ansible-navigator.settings.sources": "Defaults",
+        "ansible-navigator.time-zone": "Defaults",
+        "settings_file_path": "None",
+        "settings_file_source": "None"
+    },
+    "status": "successful",
+    "status_color": 10,
+    "stdout": [
+        "",
+        "PLAY [Install and Run Node Exporter on nodes] **********************************",
+        "",
+        "TASK [Gathering Facts] *********************************************************",
+        "\u001b[1;35m[WARNING]: Timeout exceeded when getting mount info for /remotedata\u001b[0m",
+        "\u001b[0;32mok: [node1]\u001b[0m",
+        "",
+        "TASK [Pull latest Node Exporter image] *****************************************",
+        "\u001b[0;33mchanged: [node1]\u001b[0m",
+        "",
+        "TASK [Run Node Exporter container] *********************************************",
+        "\u001b[0;33mchanged: [node1]\u001b[0m",
+        "",
+        "TASK [Ensure firewall allows Node Exporter port] *******************************",
+        "\u001b[0;33mchanged: [node1]\u001b[0m",
+        "",
+        "PLAY RECAP *********************************************************************",
+        "\u001b[0;33mnode1\u001b[0m                      : \u001b[0;32mok=4   \u001b[0m \u001b[0;33mchanged=3   \u001b[0m unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   "
+    ],
+    "version": "2.0.0"
+}

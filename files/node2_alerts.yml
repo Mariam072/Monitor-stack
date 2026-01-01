@@ -1,0 +1,12 @@
+groups:
+  - name: node2_alerts
+    rules:
+      - alert: Node2Down
+        expr: up{job="node2"} ==0
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Node2 is down!"
+          description: "Node2 (192.168.111.136) is not reachable by Prometheus."
+

@@ -1,0 +1,9 @@
+- name: Run Node Exporter container
+  containers.podman.podman_container:
+    name: node_exporter
+    image: prom/node-exporter
+    state: started
+    restart_policy: always
+    ports:
+      - "9100:9100"
+
